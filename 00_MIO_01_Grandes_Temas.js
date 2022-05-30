@@ -1,0 +1,17 @@
+/*
+for
+
+forEach
+
+Push 
+
+Unshift
+
+includes
+
+array.reduce
+
+ternario
+
+
+*/
