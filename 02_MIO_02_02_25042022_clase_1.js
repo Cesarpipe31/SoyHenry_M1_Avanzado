@@ -31,6 +31,19 @@ function sumaDeArrays(array) {
   // Ejemplo
   //let array = [1, [2, 3], 4]
   // --> [1, 5, 4]
+  let nuevoArray = []
+  array.forEach((e1) => {
+    if (Array.isArray(e1)) {
+      let contador = 0
+      e1.forEach((e) => {
+        contador += e
+      })
+      nuevoArray.push(contador)
+    } else {
+      nuevoArray.push(e1)
+    }
+  })
+  return nuevoArray
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
@@ -45,6 +58,13 @@ function mismoValorMismosElementos(numero, divisor) {
   // (2) [5, 5]
   // mismoValorMismosElementos(10, 5)
   // (5) [2, 2, 2, 2, 2]
+  let nuevoArray = []
+  if (numero % divisor !== 0) return false
+  let resultado = numero / divisor
+  for (let i = 0; i < divisor; i++) {
+    nuevoArray.push(resultado)
+  }
+  return nuevoArray
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -57,6 +77,11 @@ function numeroEnComun(array1, array2) {
   //let a2 = [3, 4, 5]
   //numeroEnComun(a1, a2)
   // --> 3
+  for (let i=0; i<array1.length; i++){
+    if(array2.includes(array1[i])){
+      return array1[i]
+    }
+  }
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
@@ -67,6 +92,11 @@ function elementoMenorYMayor(array) {
   // Ejemplo -
   // let array = [1, 2, 6, 4, 5]
   // --> [1, 6]
+  let nuevoArray = []
+  let resultMenor = array.reduce((acc.elem) => elem < acc ? acc = elem : acc)
+  let resultMayor = array.reduce((acc,elem)=> elem > acc ? acc = elem : acc )
+  nuevoArray.push(resultMenor, resultMayor)
+  return nuevoArray
 }
 
 /* ******************************************************
