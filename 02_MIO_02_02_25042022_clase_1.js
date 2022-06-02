@@ -7,9 +7,17 @@ function invertirOrden(array) {
   // Objetivo : invertir el orden de los elementos del array que se recibe por parametro
   // Desafio --> En caso de que el elemento sea de mas de 1 digito, el mismo NO debera ser devuelto en el nuevo array
   // y no vale usar el metodo "reverse"
+
   // Ejemplo:
   // let array = [1, 2, 30, 4, 5, 60]
   // --> [5, 4, 2, 1]
+  let nuevoArray = []
+  array.forEach((e1) => {
+    if (e1 < 10) {
+      nuevoArray.unshift(e1)
+    }
+  })
+  return nuevoArray
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
